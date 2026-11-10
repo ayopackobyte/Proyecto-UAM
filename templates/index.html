@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>UniPath UAM - Inicio</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f7f6; padding: 40px; color: #333; }
+        .container { max-width: 500px; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin: auto; }
+        input, select, button { width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
+        button { background: #007b8f; color: white; border: none; font-weight: bold; cursor: pointer; }
+        button:hover { background: #005f6e; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>UniPath UAM</h2>
+        <p>Configura tu perfil académico:</p>
+        
+        <form method="POST">
+            <!-- Agrega esto justo debajo del campo de Año de ingreso en tu index.html -->
+            <label>Promedio Académico (0-100):</label>
+            <input type="number" name="promedio" placeholder="Ej. 88" min="0" max="100" required>
+            <label>Nombre del estudiante:</label>
+            <input type="text" name="nombre" required>
+            
+            <label>Carrera:</label>
+            <select name="carrera" required>
+                <option value="" disabled selected>Selecciona tu carrera...</option>
+                <optgroup label="Facultad de Odontología">
+                    <option value="Odontología">Odontología</option>
+                </optgroup>
+                <optgroup label="Facultad de Ciencias Médicas">
+                    <option value="Medicina">Medicina</option>
+                    <option value="Psicología">Psicología</option>
+                    <option value="Nutrición">Nutrición</option>
+                </optgroup>
+                <optgroup label="Facultad de Marketing, Diseño y Ciencias de la Comunicación">
+                    <option value="Marketing y Publicidad">Marketing y Publicidad</option>
+                    <option value="Diseño y Comunicación Visual">Diseño y Comunicación Visual</option>
+                    <option value="Comunicación y Relaciones Públicas">Comunicación y Relaciones Públicas</option>
+                </optgroup>
+                <optgroup label="Facultad de Ciencias Administrativas y Económicas">
+                    <option value="Administración de Empresas">Administración de Empresas</option>
+                    <option value="Contabilidad y Finanzas">Contabilidad y Finanzas</option>
+                    <option value="Economía Empresarial">Economía Empresarial</option>
+                    <option value="Negocios Internacionales">Negocios Internacionales</option>
+                </optgroup>
+                <optgroup label="Facultad de Ingeniería y Arquitectura">
+                    <option value="Arquitectura">Arquitectura</option>
+                    <option value="Ingeniería Civil">Ingeniería Civil</option>
+                    <option value="Ingeniería Industrial">Ingeniería Industrial</option>
+                    <option value="Ingeniería en Sistemas de Información">Ingeniería en Sistemas de Información</option>
+                </optgroup>
+                <optgroup label="Facultad de Ciencias Jurídicas, Humanidades y Rel. Int.">
+                    <option value="Derecho">Derecho</option>
+                    <option value="Diplomacia y Relaciones Internacionales">Diplomacia y Relaciones Internacionales</option>
+                </optgroup>
+            </select>
+            
+            <label>Año de ingreso:</label>
+            <input type="number" name="anio" placeholder="Ej. 2026" required>
+            
+            <button type="submit">Generar Malla</button>
+        </form>
+    </div>
+</body>
+</html>
